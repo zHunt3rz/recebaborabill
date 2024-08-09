@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultralkilling</title>
+    <link rel="stylesheet" href="Ruina.css">
+    <style>
+
+        /* Estilo do container */
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo do campo de senha */
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            width: 80%;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        /* Estilo do botão */
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: black;
+            background-color: white;
+            border: 2px solid black;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Efeito de hover no botão */
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* Estilo da mensagem de erro */
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>OCVSOICVSOCU</h2>
+    <h2>Primum verbum
+        destructum locum</h2>
+    <div class="vig">
+        <img src="https://th.bing.com/th/id/R.031f7859800d37120bf401b69d9d1bbd?rik=armj%2fkiXJbrMCQ&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Q4CSnuH3-Xg%2fVHKV5CwMP7I%2fAAAAAAAAAFI%2fsrN_OVBTE78%2fs1600%2fVIGNARESSSSSSSS.png&ehk=wFfzCbh%2bUicCCT5gdsZNrOizl5iqpbZ2KFb%2bW%2bw0nI8%3d&risl=&pid=ImgRaw&r=0" height="500px">
+    </div> 
+    <div class="container">
+        <h2>Digite a Senha</h2>
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="checkPassword()">Entrar</button>
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            var correctPassword = "Xinforinfola"; // Substitua com a senha desejada
+            var errorMessage = document.getElementById('error-message');
+
+            if (password === correctPassword) {
+                // Redireciona para a nova página
+                window.location.href = "Xinforinfola.html"; // Substitua com a URL da página para onde deseja redirecionar
+            } else {
+                // Exibe mensagem de erro
+                errorMessage.textContent = "Senha incorreta. Tente novamente.";
+            }
+        }
+    </script>  
+</body>
+</html>

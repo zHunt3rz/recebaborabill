@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xinforinfola</title>
+    <link rel="stylesheet" href="Ruina.css">
+    <style>
+
+        /* Estilo do container */
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo do campo de senha */
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            width: 80%;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        /* Estilo do botão */
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            color: black;
+            background-color: white;
+            border: 2px solid black;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Efeito de hover no botão */
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* Estilo da mensagem de erro */
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style></head>
+<body>
+    <div id="play-button" style="text-align: center; margin-top: 20%;">
+        <button onclick="startMusic()">Always be villain.</button>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="videoplayback.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <script>
+        function startMusic() {
+            var audio = document.getElementById('background-music');
+            audio.play();
+            document.getElementById('play-button').style.display = 'none'; // Oculta o botão após a reprodução começar
+        }
+    </script>
+        <div class="container">
+            <h2>Digite a Senha</h2>
+            <input type="password" id="password" placeholder="Senha">
+            <button onclick="checkPassword()">Entrar</button>
+            <div id="error-message" class="error"></div>
+        </div>
+        <script>
+            function checkPassword() {
+                var password = document.getElementById('password').value;
+                var correctPassword = "Goneangels"; // Substitua com a senha desejada
+                var errorMessage = document.getElementById('error-message');
+    
+                if (password === correctPassword) {
+                    // Redireciona para a nova página
+                    window.location.href = "Goneangels.html"; // Substitua com a URL da página para onde deseja redirecionar
+                } else {
+                    // Exibe mensagem de erro
+                    errorMessage.textContent = "Senha incorreta. Tente novamente.";
+                }
+            }
+        </script>
+</body>
+</html>
